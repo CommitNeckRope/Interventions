@@ -40,6 +40,13 @@ describe('ProblemeComponent', () => {
     expect(zone.valid).toBeTruthy();
   });
 
+  //test3
+  it('Zone PRÉNOM valide avec 200 caractères', () => {
+    let errors = {};
+    let zone = component.problemeForm.get('prenomProbleme');
+    zone.setValue('a'.repeat(200));
+    expect(zone.valid).toBeTruthy();
+  });
 
 
 });
