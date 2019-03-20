@@ -24,15 +24,14 @@ describe('ProblemeComponent', () => {
    it('should create', () => {
      expect(component).toBeTruthy();
    });
-
+   
+   //test1
    it('Zone PRÉNOM invalide avec 2 caractères ', () => {
      let zone = component.problemeForm.controls['prenomProbleme'];
-     zone.setValue('a'.repeat(3));
-     expect(zone.valid).toBeTruthy();
+     zone.setValue('a'.repeat(2));
+     expect(zone.valid).toBeFalsy();
    });
 
-   it('prenom', () => {
-    
-  });
+
 
 });
